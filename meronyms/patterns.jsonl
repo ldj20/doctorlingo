@@ -1,0 +1,56 @@
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "is part of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "made of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "to make"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "made from"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "'s"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "of the"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"},{"POS": "VERB"}, {"TEXT": "has"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"},{"POS": "VERB"}, {"TEXT": "has"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"TEXT": "is a"}, {"POS": "NOUN"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"TEXT": "the"}, {"POS": "NOUN"}, {"TEXT": "'s"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "component of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "consists of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "member of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "portion of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "stuff of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "located in"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "contained in of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "phase of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "participates in"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "component"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "consists"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "member"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "portion"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "stuff"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "located"}, {"TEXT": "in"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "contained"}, {"TEXT": "in"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "phase"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "MERONYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "participates"}, {"TEXT": "in"}, {"POS": "NOUN"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "is part of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "made of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "to make"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "made from"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "'s"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "of the"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "is a"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "the"}, {"TEXT": "'s"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "component of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "consists of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "member of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "portion of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "stuff of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "located in"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "contained in of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "phase of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "participates in"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "component"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "consists"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "member"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "portion"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "stuff"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "located"}, {"TEXT": "in"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "contained"}, {"TEXT": "in"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "phase"}, {"TEXT": "of"}]}
+{"label": "OBJECT", "pattern": [{"TEXT": "participates"}, {"TEXT": "in"}]}

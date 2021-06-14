@@ -1,0 +1,51 @@
+UMLS relationships per the website:
+NHL - kukuji fujimoto
+
+Semantic Relationships
+Of the fifty-four semantic relationships the primary link between most semantic types is the isa relationship. The 'isa' relationship establishes the hierarchy of types within the Semantic Network and is used for deciding on the most specific semantic type available for assignment to a Metathesaurus concept.
+Some examples of the 'isa' relationship: Animal isa Entity, Carbohydrate isa Chemical, Human isa Mammal 
+There are five major, non-hierarchical relationships: Physically related to, Spatially related to, Temporally related to, Functionally related to,
+Conceptually related to.
+
+Semantic relationships may or may not hold at the concept level.
+For example, the relationship Clinical Drug causes Disease or Syndrome does not hold at the concept level for Aspirin and Cancer. Aspirin does not cause cancer. Not all relationships that apply at the concept level are indicated in the Semantic Network. Specifically:
+
+|Type 1				|	|Relationship		|Type 2				|
+-----------------------------------------------------------------
+|Sign or Symptom	|	|evaluation of		|Organism Attribute	|
+
+The above relationship does not hold between the concepts fever and body weight. Fever is not an evaluation of body weight.
+Image for a portion of the semantic relationships: https://www.ncbi.nlm.nih.gov/books/NBK9679/figure/ch05.F3/
+
+Parent - Child (broader/narrower) Relationships
+One of the more important relationships within the Semantic Network is the Parent-Child, or Broader-Narrower, relationship. This relationship illustrates the hierarchies that exist between biomedical concepts. Child (narrower) relationships can be thought of as a subtype. For example, the semantic type Biologic Function is the parent of, or broader than, the semantic type Physiologic Function.
+
+It is important to note that the level of granularity varies across the Network. For example, a child of Physical Object is Manufactured Object. Manufactured Object has only two child terms, Medical Device and Research Device. It is clear that there are manufactured objects other than medical devices and research devices. Rather than expand the number of semantic types, concepts that are neither medical devices nor research devices are simply assigned the broader semantic type Manufactured Object.
+
+Some examples of the Parent-Child Relationship:
+Parent (broader) type|		Child (narrower) type
+-------------------------------------------------
+Physiologic Function		Organism Function
+Affects						Disrupts
+Finding						Sign or Symptom
+
+
+The SPECIALIST Lexicon
+The SPECIALIST Lexicon is an English lexicon (dictionary) that includes biomedical terms as well as commonly occurring English words. The lexical entry for each word or term records the following information:
+
+Syntactic (syntax information)
+Morphological (inflection, derivation, and composition information)
+Orthographic (spelling information)
+Currently the SPECIALIST Lexicon contains over 200,000 terms and is used by the lexical tools to aid in Natural Language Processing. Words are selected for entry into the Specialist lexicon from a variety of sources:
+
+The UMLS Test Collection of MEDLINE abstracts
+Dorland's Illustrated Medical Dictionary
+The American Heritage Word Frequency Book
+Longman's Dictionary of Contemporary English
+Current MEDLINE citation records
+
+
+From Semantic Network
+
+From Synantic Network
+(The SPECIALIST Lexicon)**************************************************************************************************************************************************************************************

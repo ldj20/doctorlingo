@@ -1,0 +1,371 @@
+If it says first it means the hypernym (less specific word) is at the beginning.
+
+[{"POS": "NOUN"}, {"TEXT": "which is an example of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "which is a kind of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "which is a class of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "an example of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "a kind of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "a class of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "and"},  {"TEXT": "some"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "any"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "any"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "some"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "which is called"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "is"}, {"POS:" "ADJ", Degree=sup}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "is a"}, {"IS_ALPHA"}, {"TEXT": "case of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "is a case of"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT": "is a"}, {"POS": "NOUN"}, {"TEXT": "that"}],
+[{"POS": "NOUN"}, {"TEXT": "is an"}, {"POS": "NOUN"}, {"TEXT": "that"}],
+[{"TEXT": "properties of"}, {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}],
+[{"TEXT": "properties of"}, {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"POS": "NOUN"}],
+[{"TEXT": "features of"},  {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}],
+[{"TEXT": "features of"},  {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"POS": "NOUN"}],
+[{"TEXT": "unlike"}, {"TEXT":"most"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "unlike"}, {"TEXT":"all"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "unlike"}, {"TEXT":"any"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "unlike"}, {"TEXT":"other"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "like"}, {"TEXT": "most"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "like"}, {"TEXT":"all"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "like"}, {"TEXT":"any"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"TEXT": "like"}, {"TEXT":"other"}, {"POS": "NOUN"}, {"IS_PUNCT"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}, {"POS": "NOUN"}],
+[{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}, {"POS": "NOUN"}, {"POS": "NOUN"}],
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}], (first)
+
+[{"TEXT": "such as"}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"TEXT": "such as"}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"} {"TEXT": "other"} {"POS": "NOUN"}], (last),
+[{"POS": "NOUN"}, {"TEXT": "and"} {"TEXT": "other"} {"POS": "NOUN"}] (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "include"},{"POS": "NOUN"},{"IS_PUNCT": True},{"TEXT": "and"}], (first),
+[{"POS": "NOUN"}, {"TEXT": "include"}, {"POS": "NOUN"},{"IS_PUNCT": True},{"TEXT": "and"}, (first)],
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "include"},{"POS": "NOUN"},{"IS_PUNCT": True},{"TEXT": "and"}, (first),	
+[{"POS": "NOUN"}, {"TEXT": "include"}, {"POS": "NOUN"},{"TEXT": "and"}, (first)],
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "include"},{"POS": "NOUN"},{"IS_PUNCT": True},{"TEXT": "or"}], (first),	
+[{"POS": "NOUN"}, {"TEXT": "include"}, {"POS": "NOUN"},{"TEXT": "or"}, (first)],
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "and"}], (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "or"}], (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "and"}], (first),
+[{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}], (first)
+[{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "or"}], (first),
+[{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}], (first)
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and "}, {"TEXT": "any"}, {"TEXT": "other"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and "}, {"TEXT": "any"}, {"TEXT": "other"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and "}, {"TEXT": "other"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and "}, {"TEXT": "any"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "some"}, {"TEXT": "other"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "some"}, {"TEXT": "other"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "some"}, {"TEXT": "other"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "other"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and be a"}, {"POS": "NOUN"}, (last)
+[{"POS": "NOUN"}, {"TEXT": "and be a"}, {"POS": "NOUN"}, (last)
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "like"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "like"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+ 
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "as"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"TEXT": "as"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"TEXT": "such"}, {"POS": "NOUN"}, {"TEXT": "as"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "like"}, {"TEXT": "other"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "like"}, {"TEXT": "other"}, {"POS": "NOUN"}, (last),
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "the"}, {"POS": "NOUN"}, (last), 
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "the"}, {"POS": "NOUN"}, (last),
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}, (last), 
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}, (last), 
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "be"}, {"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "be"}, {"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}, {"IS_ALPHA": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "for"}, {"TEXT": "example"}{"IS_PUNCT": True} (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "for"}, {"TEXT": "example"} (first),
+[{"POS": "NOUN"}, {"TEXT": "for"}, {"TEXT": "example"}{"IS_PUNCT": True} (first),
+[{"POS": "NOUN"}, {"TEXT": "for"}, {"TEXT": "example"} (first),
+ 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first), 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first), 
+[{"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "particularly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "particularly"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "particularly"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "particularly"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "principally"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "principally"}, {"POS": "NOUN"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "principally"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, (first),
+[{"POS": "NOUN"}, {"TEXT": "principally"}, {"POS": "NOUN"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "except"} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "except"} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "except"} {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "except"} {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "except"} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "except"} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "except"} {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "except"} {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"} {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"TEXT": "and"}, (first)
+[{"POS": "NOUN"} {"TEXT": "e.g."}, {"POS": "NOUN"} {"TEXT": "and"}, (first)
+[{"POS": "NOUN"} {"TEXT": "e.g."}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"TEXT": "or"}, (first)
+[{"POS": "NOUN"} {"TEXT": "e.g."}, {"POS": "NOUN"} {"TEXT": "or"}, (first)
+[{"POS": "NOUN"} {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"TEXT": "and"}, (first)
+[{"POS": "NOUN"} {"TEXT": "i.e."}, {"POS": "NOUN"} {"TEXT": "and"}, (first)
+[{"POS": "NOUN"} {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"} {"TEXT": "or"}, (first)
+[{"POS": "NOUN"} {"TEXT": "i.e."}, {"POS": "NOUN"} {"TEXT": "or"}, (first)
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"IS_PUNCT": True}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"IS_PUNCT": True},{"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "a"}, {"TEXT": "kind"} {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "a"}, {"TEXT": "kind"} {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "a"},{"TEXT": "kind"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "a"},{"TEXT": "kind"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "a"}, {"TEXT": "form"} {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "a"}, {"TEXT": "form"} {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "a"},{"TEXT": "form"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "a"},{"TEXT": "for"}, {"TEXT": "of"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"},{"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+
+ 
+ [{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"},{"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"}, {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"TEXT": "ir"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"} ?, {"TEXT": "ir"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "type"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "type"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"},  {"POS": "NOUN"} {"TEXT": "type"}, (last),
+[{"POS": "NOUN"} {"TEXT": "and"},  {"POS": "NOUN"} {"TEXT": "type"}, (last),
+[{"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "or"},  {"POS": "NOUN"} {"TEXT": "type"}, (last),
+[{"POS": "NOUN"} {"TEXT": "or"},  {"POS": "NOUN"} {"TEXT": "type"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first),
+[{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first),
+
+[{"TEXT": "compare"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "with"} {"POS": "NOUN"}, (last),
+[{"TEXT": "compare"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "with"} {"POS": "NOUN"}, (last),
+[{"TEXT": "compare"}, {"POS": "NOUN"} {"TEXT": "and"}, {"TEXT": "with"} {"POS": "NOUN"}, (last),
+[{"TEXT": "compare"}, {"POS": "NOUN"} {"TEXT": "or"}, {"TEXT": "with"} {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}''(first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}''(first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "and"}''(first),
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "or"}''(first),
+[{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}''(first),
+[{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}''(first),
+[{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "and"}''(first),
+[{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "or"}''(first),
+
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "among"} {"IS_ALPHA": True} {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+
+[{"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "as"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "as"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"} {"TEXT": "and"}, {"TEXT": "as"} {"POS": "NOUN"}, (last),
+[{"POS": "NOUN"} {"TEXT": "or"}, {"TEXT": "as"} {"POS": "NOUN"}, (last),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "for instance"}, (first ), 
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"IS_PUNCT": True},  {"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "for instance"}, (first ),
+[{"POS": "NOUN"}, {"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "for instance"}, (first ),
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "and"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"} 
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "or"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"} 
+[{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"} 
+[{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"} 
+
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"IS_PUNCT": True}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"} {"IS_PUNCT": True}, {"TEXT": "or"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "and"}, (first)
+[{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "or"}, (first)

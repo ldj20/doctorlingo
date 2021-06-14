@@ -1,0 +1,81 @@
+
+
+-Overview of project: Creating a pipeline that uses artificial intelligence (AI), specifically containing a model trained with machine learning and natural language processing, to store, process, and interpret medical words or even whole medical notes into a patient-readable interpretation. It was primarily developed in the programming language Python and with freely available data. Some licenses were required, i.e., for the United Medical Language System (UMLS) database from the NIH.
+
+-Jargon (ironically) in this message:
+--"bootstrapping" = a type of way to prep a model for supervised machine learning
+--"db" = database
+--"Scraping" in NLP/big data jargon, means retrieving data from a source. 
+--"Corpus" in NLP is a body of text. It can contain meta-data, or not, which we call a "bag of words."
+-AI = artificial intelligence - I'm sure you are familiar with this term
+-ML = Machine Learning - Probably still familiar, but if not - it is a form of AI that trains a computer to predict things
+-NLP = natural language processing - Not as commonly used in common conversation - a specific subset of ML
+So;
+-NLP is a form of ML; ML is a form of AI. AI is the most general term
+
+-Important concepts:
+--The immediately above phrase is actually an example of an informal logic representation of a linguistics concept that this project heavily relies upon, hypernymy.
+--Both logic (computer logic/formal/symbolic logic) and areas of linguistics are very important to this project, but that is beyond the scope of a general discussion. Here are the core components needed to understand how the model we developed works.
+--In brief, we had to think about how people explain things to one another.
+--Simply defining a medical term by an official definition from whatever source is problematic because it often includes heavy jargon.
+--In linguistics, two common themes are apparent when explaining a concept to someone - hypernymy and meronymy)
+--Hypernymy is a linguistic concept that relates words in terms of specificity; orange is a type of color (color is the hypernym, less specific category to which orange, the hyponym, belongs; orange is also a fruit however, and our corpus is set up to handle multiple meanings, spellings, acronyms, etc, some medical slang is pending).
+--Meronymy, which is a "part-whole" relationship, the atria are part of the heart. Here, the atria are the meronym (the part) and the heart is the holonym (the whole). This is the second most common relationship seen in wordnet and the second most important concept in linguistics when first explaining a new word to someone.
+
+-Rationale: Mandatory open notes, whether some like it or not, seem to be the future for physicians/patients. Open notes are already rolled out in many EMRs. There is no real response to this, in terms of tools, for patients to understand what physicians are writing about them. Also, beneath that reasoning is the need to expand ML/NLP tools to both clinical researchers without coding experience and to computer science researchers without clinical experience. NLP opens a vast data source from patient notes for retrospective studies. So, in summary, we are building a corpus. 
+
+For data scientists/programmers, it can be viewed as a fancy database for knowledge and all English relationships between these words and actual English words. For medicine, it's a very powerful thesaurus like UMLS but expanded and able to "learn" new words/concepts, both linguistic and scientific. For patients, it's a tool to understand medical text in plain English. That last sentence doesn't really do the justice for the upgrade that patient's will experience if they use this over say, a google search. So I will use some hyperbole to emphasize. 
+
+The cherry on top is that the expert wrote it not with you or another non-expert in mind but as a quick and general reminder for themself, other experts in the field, or to bill companies that reimburse their services. In the field that the author studied, the wrong interpretation of his instructions, while seemingly dramatic, could kill the person. 
+
+Hyperbolic example: Imagine you wake up in an unfamiliar place. You find a document with a specific set of instructions and realize it is written in another language. The only thing you can make out is that the length and quality of your life very likely depend on this. The exact length of time and quality of life are not specified, but you seem to think it's important because you can also make out some words that describe your organs getting injured or possibly failing. Not only are the stakes high knowing that but then you remember briefly being told that the instructions are written in short-hand and by an expert with at least over a decade of study and practice, in the one remarkably complex field that has the answer which your life depends on. You don't know which items in this document to use when. You are actually not even sure if this document is saying your life depends on doing something, keeping things the same, or changing something. You just know that your fate is somehow tied to this document.
+
+Now let's say you are the patient above, and you have to choose two resources to interpret that text. Your options are:
+
+1. A natural-born, native tongue, local translator, who was trained specifically with the most advanced learning techniques and by incalculably many situations to perform their one job: understanding that expert and explain what he says in plain English. 
+
+2. Or, alternatively, you have a hand-crafted tourist-guide translation pocketbook of word-to-word translations and a few phrases here and there. It also came with a downloadable app for quick searches.
+
+Which one do you pick?
+
+--The way this project will contribute to data science/medicine is both by developing the application for patients and developing a much-needed friendly corpus and comprehensive medical corpus for future researchers that goes beyond the linguistic capabilities of UMLS/SNOMED/ICD classification systems. It uses a WordNet style hierarchy, meaning that the most common form relationships and the largest "tree" of terms is by way of hypernymy. 
+
+It utilizes some state-of-the-art tech in NLP, which are not essential to understand, but if interested, specifically SpaCy, Prodigy and transformer models, seq2seq2 ML models, and abstractive text summarization, which is much harder to use than extractive, but if done right, more natural to the reader (see links below model development for more info on SpaCy and Prodigy, transformers are very complex and beyond scope of this).
+
+-General description of the AI model: The artificial intelligence pipeline uses a type of machine learning called natural language processing. Essentially, I take examples of things I want to teach the computer. I then feed the computer this as "gold-standard" data. This has both positive and negative examples to learn from. 
+Briefly, the statistical/mathematical way a computer learns with "machine learning" and "natural language processing" involves taking the data it is fed and passing it through an N-gram matrix and finding patterns. This creates "the model." The N-gram matrix can be thought of similar to an x, y axis plot, except it is "N" number of axises for any feature you want, instead of just two dimensional. Meaning the model can learn, at least in theory, infinite pattern associations for data fed to it, if a pattern for related concepts exists. 
+While machine learning is quite complex from an algorithm development perspective, the best way to think of it in basic stats is infinity linear regressions to describe a relationship or find the best "fit" solution to a problem (any data that passes through the model). The machine predict outcomes from input by passing the problem through the model and seeing if the N-features are close enough to a threshold in the N-dimensions it considered significant, to be consider a positive; if not, its a negative.
+
+-Model development (generally): In this section, I describe just the development of the model portion of the pipeline. I do not include the whole pipeline in detail because it is quite involved. In short, I used python (a programming language) to scrape Wikipedia for all articles on all cancers listed per the NCI designation of cancer types. I then wrote python scripts to search the scraped text for all examples of hypernyms and meronyms with a linguistic pattern called Hearst Patterns (essentially phrases that we commonly find hypernyms in English [and actually any language given syntax/grammar correction] i.e. a pattern like, "common types of large domestic dogs include Pitbulls, retrievers and shepherds"). 
+
+The amount of data required for Machine Learning is quite astounding. Just to bootstrap, not even fully train the model, I gathered a ~1 million words, ~50,000 sentences, about 5,000 unique examples of hypernyms/meronyms identified per a simple algorithmic pattern matcher that I wrote in SpaCy which does use some NLP, but just to tokenize and assign linguistic relationships to the tokens in the data. This algorithmic approach is only about 80% accurate, whereas the model hits >90% every time it runs - that's the power of transformer models). To get the model to 95-99% range it will require a massive amount more of data and with diminishing returns. However, I do have a massive amount of data, the corpus, which I will run against all of PUBMED since the beginning of its existence to find patterns for the model. 
+
+Specifically to train the model, for both the new model and the first model I feed the hypernym/meronym patterns to two machine learning/natural language processing packages developed for python: SpaCy, and Prodigy.
+
+SpaCy can be though of the master tool and is the actual package that includes ground-breaking, state-of-the-art AI/NLP algorithms to perform natural language processing on text in a very pythonic (concise and intuitive) way. SpaCy includes the ability to use recently developed breakthroughs in AI modeling like "transformers." 
+
+Not only that, but the makers of SpaCy also developed Prodigy, a tool to annotate datasets for machine learning. For supervised machine learning (best for our purposes, especially given this may eventually have real impact on patients -- we want to know what the computer is learning from -- this will also help with anyone who believes our model fits the "AI black box" fear) specifically to reduce the time it takes to train/bootstrap a model. 
+
+Prodigy is essentially a program that allows rapid manual notation of new gold-standard datasets. So for example if I scrape 1 million examples of hypernyms from PUBMED, to code a program to annotate each example as positive or negative for all possibilities, or to do it manually would take quite some time and effort. Prodigy creates a GUI that loads all of the scraped data with all linguistic concepts available that would create a relationship in English. You just then click on the words that are associated and name that link the relationship you want to train the model for. This is presented in a way that can be done very rapidly, I can annotate in a couple clicks hundreds to thousands of relationships in just a few minutes. You could have an annotated bootstrapping dataset in a few hours, or a full dataset for completely supervised learning in just a day. Normally in ML this takes months. I just want to emphasize the power of that for future projects. With this pipeline developed it can be applied to pretty much any NLP answerable question with results in like a week to two weeks tops. This took me a few months because I was teaching myself NLP from scratch.
+
+https://spacy.io/usage
+https://prodi.gy/
+
+-Pipeline development for corpus development specifically (some more details): 
+--I "scraped" all unique words from my licensed copy of UMLS to obtain about 3,623,742 unique words 
+--It is important to note that I did not scrape concepts or entries, but literally any string of text/data from the UMLS database.
+--I re-ran those words with a python script against UMLS, SNOMEDCT db, and ICD10 db to extract official terms/concepts/entries from all those db's.
+--To add flexibility to this corpus it will include all of wordnet, which is one of the most powerful and commonly used corpuses to date for all of NLP.
+--So our corpus hosts all concepts and data from UMLS, SNOMED, ICD10, and wordnet, making it possibly the most comprehensive source of medical terms to date.
+--I also trained it to identify hypernyms and meronyms. I did this by bootstrapping the model to get it to ~90% accuracy on most runs.
+--I then format the raw final first version of the corpus data to a JSON format so it can be used with SpaCy's built-in NER model (very powerful and very scalable).
+--This is the corpus framework - then we format the corpus for our DL website into another database.
+--The modifiable SpaCy (dynamic) corpus and DL website (static/official) corpus will talk to one another. Crowdsourcing will still be implemented by users being allowed to "verify a definition." If a term or (word or short noun phrase) is searched and it has a result that is not in the official corpus, and a user who is has the privileges to verify it does it, it signals the dynamic corpus to flag it for updating the static corpus at a specific time interval yet to be determined.
+--If the word does not exist in either the official as an official term or in the dynamic corpus at all, then it activates a python script that uses SpaCy, our trained custom model on scraped data to see if it can generate a suitable term to add to the dynamic corpus to await verification.
+--There are many millions of more tokens for medical concepts/terms in our final corpus.
+--For the SpaCy model - currently, in a given text with context, the model recognizes all general linguistic concepts (parts of speech, synonyms/antonyms, syntax, grammar, etc in English) 
+
+-Usage: The model will be used by patients, as follows, in the pipeline for production. 
+--If a patient enters a single word, it will pull the word from our corpus if we have it as a token in our corpus, it will return a definition of the word and using hypernyms and meronyms to "translates" the definition into "plain English." This involves complexity scoring of words passages that are returned in the definition, also beyond scope. If not it will scrape data for use context of said word, in English, to generate an entry to our corpus. 
+--If a patient enters a body of text, it will parse the text and translate similarly to how it does for a single word definition above. Except it scores the complexity of the passage by each part by the complexity of the words in said part. It returns the complex words substituted for hypernyms/meronyms. If a patient wants the word to be more specific or less specific, or see if its a part of something else, a type of something else, or any English linguistic concept such as part of speech, function in a sentence (including all grammar and syntax concepts) it will return that in simpler terms as well. 
+--For example, a sentence like "The patient should take amlodipine 5mg daily." It will score the sentence for complexity. recognize that the latter portion of the sentence is complex and it will interpret that. It will recognize that amlodipine is an entity type "medication" and then return a definition of that medication that is in plain English, such as "Amlodipine is a medication for high blood pressure." It includes a disclaimer that this is not a substitute for a physician's explanation of the written text of a medical plan for themself.

@@ -1,0 +1,204 @@
+#Format for our corpus:
+
+**--PWN = PWN properties
+**--GWN = GWN properties
+**--UMLS = UMLS properties
+
+#Top file contains a comma dict of unique TKN:TKN_ID - search function in website searches this. If there, great, literal python dict "get" fx -> the file data; if not there do NLP stuff.
+#The other files: a file in python dict format for each unique "TKN:TKN_ID" in our list - a unique entry w/ associated unique ID that connects all others concepts / relations w/ that entry and other entries
+#Entries can be words, noun phrases, entities (i.e. Hulk Hogan, Princeton, Clifford the Big Red Dog), etc. Basically any conceptual thing that we use
+#In natural medical language - eventually maybe in other fields / all of English / the world / the friggin' universe?
+
+--In order, these properties were properties used in PWN, UMLS, GWN as these are in decreasing order of necessity for syntactic and semantic relations for this corpus to work well.
+
+--Many of the categories from GWN may not be filled into because low yield overall for meaning.
+
+
+--If TKN is preceded by something, it means it is a relation derived from that specific abbreviations source (see below for abbrv details)
+--If TKN is not preceded by something, it means it is a relation that is used amongst many NLP corpora / databases
+--If a relation for a word existed in its original source, it should exist here, meaning if you don't see for example a gender property associated w/ UMLS, but you know that UMLS has a gender property, its because that was also a shared wordnet property, since it is unique to neither, we consider it a general property so it will not be preceded by a source.
+--If two databases had repeat properties, they were not repeated and concantinated
+
+--Wordnet relation info - for info on semantic/syntantic properties from wordnets see -- GWA schemas page (https://globalwordnet.github.io/schemas/)
+--UMLS relation info - for info on TKN_UMLS semantic/syntantic properties from metathesaurus see -- TKN_UMLS Reference Manual (https://www.ncbi.nlm.nih.gov/books/NBK9676/)
+--If the relation abbreviation is three capital letters this signifies it is from PWN / TKN_UMLS - the most fundamentally important concepts for our corpus (i.e. hypernyms and meronyms, being the top two most important). Some exceptions are if that category is included in another source, but a subcategory of that category is not and therefore would lose data from said source an example of this is the UMLS_TKN_SCA - or the syntactic category from UMLS. The SCA from UMLS includes parts of speech, which is in many databases, but it also have "complementizers" which are specific relations, but miscellaneous enough to keep this category despite POS redundancy.
+
+-----------------------FILE WOULD START HERE AND BE IN PYTHON DICT FORMAT (SEE EXAMPLE)--------------------------------------
+TKN_ID: Unique integer ID of this token (also the file name)
+TKN: The lemma token string (must be lemmatized, nominalized, stemmed, etc. appropriately, essentially, the basis of your token)
+TKN_POS: as per Universal POS tags for English (https://universaldependencies.org/docs/u/pos/)
+TKN_FET: as per Universal Feature tags (not covered in POS) for Enlish (https://universaldependencies.org/docs/u/feat/index.html)
+TKN_FOR: Forms of token: string of form:form#:form definitition a/w this token. For example if a verb the lemma is infinitive, form is tense
+TKN_SEN: Use the token in the specified form returned in a sentence, use a sentence that can accept all forms as string variable
+TKN_GEN: TKN gender
+TKN_HPE: TKN hypernym -  tkn A in relation between two concepts where tkn B is a type of tkn A.
+TKN_HPO: TKN hyponym - tkn B in relation between two concepts where tkn B is a type of tkn B.
+TKN_HOL: TKN holonyms - tkn A in relation between two concepts where tkn B is a member/ element of tkn A.
+TKN_MER: TKN meronyms - tkn B in relation between two concepts where tkn B is a member/ element of tkn A.
+TKN_ENL: TKN entails - A verb X entails Y if X cannot be done unles Y is, or has been done.
+TKN_CUZ: A relation between two concepts where B (related TKN:TKN_ID) comes into existence as a result of (token) A.
+TKM_SIM: TKN similar - closely related in meaning
+TKN_SEE: TKN see also - 
+TKN_ATB: A relation between nominal and adjectival concepts where the concept A is an attribute of concept B.
+TKN_VBG: TKN verb group - Verb senses that similar in meaning and have been manually grouped together.
+TKN_DMT: TKN domain topic - tkn B in a relation between two tkns where B is a a scientific domain (e.g. computing, sport, biology, etc.) of concept A.
+TKN_HDT: TKN has domain topic - tkn A in a relation between two concepts where B is a a scientific domain (e.g. computing, sport, biology, etc.) of concept A.
+TKN_DMR: TKN domain region - tkn B in a relation between two concepts where B is a geographical / cultural domain of concept A.
+TKN_HDR: TKN has domain region: tkn A in relation between two concepts where B is a geographical / cultural domain of concept A.
+TKN_EXF: TKN exemplifies - Indicates the usage of this word
+TKN_IEX: TKN is exemplified by - Indicates a word involved in the usage described by this word
+TKN_agent: A relation between two concepts where concept A is typically the agent of the action expressed by concept B.
+TKN_UMLS_EUI: Unique Identifier Number for Entries
+TKN_UMLS_CUI: Unique Identifier Number for Concepts
+TKN_UMLS_BAS: (saved as the TKN, as its already a lemma)
+TKN_UMLS_ABR: Abbreviation of relation
+TKN_UMLS_STR: Boolean expression string values
+TKN_UMLS_SCA: Syntactic category (noun, adj, adv, pronoun, verbs, determiners, preposition, conjunction, auxil, modals, complementizers)
+TKN_UMLS_AGR: Agreement/Inflection Code
+TKN_UMLS_CIT: Citation Form
+TKN_UMLS_COM: Complements
+TKN_UMLS_PSN: Position for adjectives (1st, 2nd, 3rd, complement, pre-, post-)
+TKN_UMLS_MOD: Modification Type for Adverbs (intensifier, particle, sentence modifier, verb modifier)
+TKN_UMLS_FEA: Features
+TKN_UMLS_NUM: 1st, 2nd, or 3rd person pronoun
+TKN_UMLS_GND: Gender
+TKN_UMLS_CAS: Case
+TKN_UMLS_POS: Possession
+TKN_UMLS_QNT: Quantification
+TKN_UMLS_SPV: Spelling variant
+TKN_UMLS_GEN: Generic term
+TKN_UMLS_TYP: Inflection type
+TKN_UMLS_WRD: Word
+TKN_antonym: An opposite and inherently incompatible word
+# TKN_be_in_state: A relation between two concepts where concept A is qualified by concept B.
+# TKN_classified_by: A relation between concept B and a classifier concept A.
+# TKN_classifies: A relation between a classifier concept A and concept B.
+# TKN_co_agent_instrument: A relation between two concepts where concept B is the instrument used by concept A in a certain action.
+# TKN_co_agent_patient: A relation between two concepts where concept B is the patient undergoing an action carried out by concept A.
+# TKN_co_agent_result: A relation between two concepts where concept B is the result of an action carried out by concept A.
+# TKN_co_instrument_agent: A relation between two concepts where concept A is the instrument used by concept B for a certain action.
+# TKN_co_instrument_patient: A relation between two concepts where concept B undergoes an action for which the instrument expressed by concept A is used.
+# TKN_co_instrument_result: A relation between two concepts where concept B is the result of an action carried out by the instrument expressed by concept A.
+# TKN_co_patient_agent: A relation between two concepts where concept B undergoes an action carried out by concept A.
+# TKN_co_patient_instrument: A relation between two concepts where concept A undergoes an action for which the instrument expressed by concept A is used.
+# TKN_co_result_agent: A relation between two concepts where concept A is the result of an action carried out by concept B.
+# TKN_co_result_instrument: A relation between two concepts where concept A is the result of an action for which the instrument expressed by concept B is used.
+# TKN_co_role: A relation between two concepts where one concept undergoes an action in which the other concept is involved (bidirectional).
+# TKN_direction: A relation between two concepts where concept A is typically the direction or location of the action or event expressed by concept B.
+# TKN_eq_synonym: A relation between two concepts where A and B are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)
+# TKN_holo_location: A relation between two concepts where concept B is a place located in concept A.
+# TKN_holo_portion: A relation between two concepts where concept B is an amount/piece/portion of concept A.
+# TKN_holonym: A relation between two concepts where concept A makes up a part of concept B.
+# TKN_in_manner: A relation between two concepts where concept B qualifies the manner in which an action or event expressed by concept A takes place.
+# TKN_instrument: A relation between two concepts where concept A is the instrument necessary for the action or event expressed by concept B.
+# TKN_involved_agent: A relation between two concepts where concept B is typically the agent of the action expressed by concept A.
+# TKN_involved_direction: A relation between two concepts where concept B is typically the direction or location of the action or event expressed by concept A.
+# TKN_involved_instrument: A relation between two concepts where concept B is typically the instrument necessary for the action or event expressed by concept A.
+# TKN_involved_location: A relation between two concepts where concept B is typically the location where the action or event expressed by concept A takes place.
+# TKN_involved_patient: A relation between two concepts where concept B is typically the patient un-dergoing an action or event expressed by concept A.
+# TKN_involved_result: A relation between two concepts where concept B comes into existence as a result of concept A.
+# TKN_involved_source_direction: A relation between two concepts where concept B is the place from where the action or event expressed by concept A begins/starts/happens.
+# TKN_involved_target_direction: A relation between two concepts where concept B is the place where the action or event expressed by concept A leads to.
+# TKN_involved: A relation between two concepts where concept B is typically involved in the action or event expressed by concept A.
+# TKN_is_caused_by: A relation between two concepts where concept A comes into existence as a result of concept B.
+# TKN_is_entailed_by: Opposite of entails
+# TKN_is_subevent_of: A relation between two concepts where concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place.
+# TKN_location: A relation between two concepts where concept A is the location where the action or event expressed by concept B takes place.
+# TKN_manner_of: A relation between two concepts where concept A qualifies the manner in which an action or event expressed by concept B takes place.
+# TKN_mero_location: A relation between two concepts where concept A is a place located in concept B.
+# TKN_mero_portion: A relation between two concepts where concept A is an amount/piece/portion of concept B.
+# TKN_meronym: A relation between two concepts where concept B makes up a part of concept A.
+# TKN_other: Any relation not otherwise specified, please use dc:type attribute to give the name of exact relation.
+# TKN_patient: A relation between two concepts where concept A is the patient undergoing an action or event expressed by concept B.
+# TKN_pertainym: usually an adjective, which can be defined as "of or pertaining to" another word.
+# TKN_restricted_by: A relation between nominal (pronominal) concept B and an adjectival concept A (quantifier/determiner).
+# TKN_restricts: A relation between an adjectival concept A (quantifier/determiner) and a nominal (pronominal) concept B.
+# TKN_result: A relation between two concepts where concept A comes into existence as a result of concept B.
+# TKN_role: A relation between two concepts where concept A is typically involved in the action or event expressed by concept B.
+# TKN_source_direction: A relation between two concepts where concept A is the place from where the action or event expressed by concept B begins/starts/happens.
+# TKN_state_of: A relation between two concepts where concept B is qualified by concept A.
+# TKN_subevent: A relation between two concepts where concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place.
+# TKN_target_direction: A relation between two concepts where concept A is the place where the action or event expressed by concept B leads to.
+------------------------------------------------------------------------------------------------------------------------------
+End file here - that is all the data possible so far for an entry into the corpus. Below are relations from each of their corresponding sources with a description
+------------------------------------------------------------------------------------------------------------------------------
+# PWN_Hypernym: A relation between two concepts where concept A is a type of concept B.
+# PWN_Hyponym: A relation between two concepts where concept B is a type of concept A.
+# PWN_instance_hyponym: A relation between two concepts where concept A is a type of concept B, and where B is a terminal node in the hierchy.
+# PWN_instance_hypernym: A relation between two concepts where concept B is a type of concept A, and where B is a terminal node in the hierchy.
+# PWN_mero_member: A relation between two concepts where concept B is a member/ element of concept A.
+# PWN_holo_member: A relation between two concepts where concept A is a member/ element of concept B.
+# PWN_mero_part: A relation between two concepts where concept B is a component of concept A.
+# PWN_holo_part: A relation between two concepts where concept A is a component of concept B.
+# PWN_mero_substance: A relation between two concepts where concept A is made of concept B.
+# PWN_holo_substance: A relation between two concepts where concept B is made of concept A.
+# PWN_entails: A verb X entails Y if X cannot be done unles Y is, or has been done.
+# PWN_causes: A relation between two concepts where concept B comes into existence as a result of concept A.
+# PWN_similar: A relation between two concepts where concept A and concept B are closely related in meaning but are not in the same synset.
+# PWN_also: See also, a reference of weak meaning
+# PWN_attribute: A relation between nominal and adjectival concepts where the concept A is an attribute of concept B.
+# PWN_verb_group: Verb senses that similar in meaning and have been manually grouped together.
+# PWN_domain_topic: A relation between two concepts where B is a a scientific domain (e.g. computing, sport, biology, etc.) of concept A.
+# PWN_has_domain_topic: A relation between two concepts where A is a a scientific domain (e.g. computing, sport, biology, etc.) of concept B.
+# PWN_domain_region: A relation between two concepts where B is a geographical / cultural domain of concept A.
+# PWN_has_domain_region: A relation between two concepts where A is a geographical / cultural domain of concept B.
+# PWN_exemplifies: Indicates the usage of this word
+# PWN_is_exemplified_by: Indicates a word involved in the usage described by this word
+------------------------------------------------------------------------------------------------------------------------------
+agent: A relation between two concepts where concept A is typically the agent of the action expressed by concept B.
+# TKN_antonym: An opposite and inherently incompatible word
+# TKN_be_in_state: A relation between two concepts where concept A is qualified by concept B.
+# TKN_classified_by: A relation between concept B and a classifier concept A.
+# TKN_classifies: A relation between a classifier concept A and concept B.
+# TKN_co_agent_instrument: A relation between two concepts where concept B is the instrument used by concept A in a certain action.
+# TKN_co_agent_patient: A relation between two concepts where concept B is the patient undergoing an action carried out by concept A.
+# TKN_co_agent_result: A relation between two concepts where concept B is the result of an action carried out by concept A.
+# TKN_co_instrument_agent: A relation between two concepts where concept A is the instrument used by concept B for a certain action.
+# TKN_co_instrument_patient: A relation between two concepts where concept B undergoes an action for which the instrument expressed by concept A is used.
+# TKN_co_instrument_result: A relation between two concepts where concept B is the result of an action carried out by the instrument expressed by concept A.
+# TKN_co_patient_agent: A relation between two concepts where concept B undergoes an action carried out by concept A.
+# TKN_co_patient_instrument: A relation between two concepts where concept A undergoes an action for which the instrument expressed by concept A is used.
+# TKN_co_result_agent: A relation between two concepts where concept A is the result of an action carried out by concept B.
+# TKN_co_result_instrument: A relation between two concepts where concept A is the result of an action for which the instrument expressed by concept B is used.
+# TKN_co_role: A relation between two concepts where one concept undergoes an action in which the other concept is involved (bidirectional).
+# TKN_direction: A relation between two concepts where concept A is typically the direction or location of the action or event expressed by concept B.
+# TKN_eq_synonym: A relation between two concepts where A and B are equivalent concepts but their nature requires that they remain separate (e.g. Exemplifies)
+# TKN_holo_location: A relation between two concepts where concept B is a place located in concept A.
+# TKN_holo_portion: A relation between two concepts where concept B is an amount/piece/portion of concept A.
+# TKN_holonym: A relation between two concepts where concept A makes up a part of concept B.
+# TKN_in_manner: A relation between two concepts where concept B qualifies the manner in which an action or event expressed by concept A takes place.
+# TKN_instrument: A relation between two concepts where concept A is the instrument necessary for the action or event expressed by concept B.
+# TKN_involved_agent: A relation between two concepts where concept B is typically the agent of the action expressed by concept A.
+# TKN_involved_direction: A relation between two concepts where concept B is typically the direction or location of the action or event expressed by concept A.
+# TKN_involved_instrument: A relation between two concepts where concept B is typically the instrument necessary for the action or event expressed by concept A.
+# TKN_involved_location: A relation between two concepts where concept B is typically the location where the action or event expressed by concept A takes place.
+# TKN_involved_patient: A relation between two concepts where concept B is typically the patient un-dergoing an action or event expressed by concept A.
+# TKN_involved_result: A relation between two concepts where concept B comes into existence as a result of concept A.
+# TKN_involved_source_direction: A relation between two concepts where concept B is the place from where the action or event expressed by concept A begins/starts/happens.
+# TKN_involved_target_direction: A relation between two concepts where concept B is the place where the action or event expressed by concept A leads to.
+# TKN_involved: A relation between two concepts where concept B is typically involved in the action or event expressed by concept A.
+# TKN_is_caused_by: A relation between two concepts where concept A comes into existence as a result of concept B.
+# TKN_is_entailed_by: Opposite of entails
+# TKN_is_subevent_of: A relation between two concepts where concept A takes place during or as part of concept B, and whenever concept A takes place, concept B takes place.
+# TKN_location: A relation between two concepts where concept A is the location where the action or event expressed by concept B takes place.
+# TKN_manner_of: A relation between two concepts where concept A qualifies the manner in which an action or event expressed by concept B takes place.
+# TKN_mero_location: A relation between two concepts where concept A is a place located in concept B.
+# TKN_mero_portion: A relation between two concepts where concept A is an amount/piece/portion of concept B.
+# TKN_meronym: A relation between two concepts where concept B makes up a part of concept A.
+# TKN_other: Any relation not otherwise specified, please use dc:type attribute to give the name of exact relation.
+# TKN_patient: A relation between two concepts where concept A is the patient undergoing an action or event expressed by concept B.
+# TKN_pertainym: usually an adjective, which can be defined as "of or pertaining to" another word.
+# TKN_restricted_by: A relation between nominal (pronominal) concept B and an adjectival concept A (quantifier/determiner).
+# TKN_restricts: A relation between an adjectival concept A (quantifier/determiner) and a nominal (pronominal) concept B.
+# TKN_result: A relation between two concepts where concept A comes into existence as a result of concept B.
+# TKN_role: A relation between two concepts where concept A is typically involved in the action or event expressed by concept B.
+# TKN_source_direction: A relation between two concepts where concept A is the place from where the action or event expressed by concept B begins/starts/happens.
+# TKN_state_of: A relation between two concepts where concept B is qualified by concept A.
+# TKN_subevent: A relation between two concepts where concept B takes place during or as part of concept A, and whenever concept B takes place, concept A takes place.
+# TKN_target_direction: A relation between two concepts where concept A is the place where the action or event expressed by concept B leads to.
+------------------------------------------------------------------------------------------------------------------------------     
+
+
+
+
+

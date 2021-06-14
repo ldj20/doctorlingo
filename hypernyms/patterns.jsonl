@@ -1,0 +1,100 @@
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which is an example of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which is a kind of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which is a class of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "an example of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "a kind of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "a class of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"},  {"TEXT": "some"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "any"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "any"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "some"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which is called"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "is"}, {"POS": "ADJ"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "is a case of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "is a"}, {"POS": "NOUN"}, {"TEXT": "that"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "is an"}, {"POS": "NOUN"}, {"TEXT": "that"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "properties of"}, {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "properties of"}, {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "features of"},  {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "features of"},  {"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT":"including"}, {"POS": "NOUN"}, {"POS": "NOUN"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "such as"}, {"POS": "NOUN"}, {"TEXT": "or"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "other"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "include"}, {"POS": "NOUN"},{"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "include"}, {"POS": "NOUN"},{"TEXT": "or"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "especially"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and "}, {"TEXT": "any"}, {"TEXT": "other"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and "}, {"TEXT": "any"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "some"}, {"TEXT": "other"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "other"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and be a"}, {"POS": "NOUN"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "like"}, {"POS": "NOUN"}, {"TEXT": "or"}]} 
+{"label": "HYPERNYM", "pattern": [{"TEXT": "such"}, {"POS": "NOUN"}, {"TEXT": "as"}, {"POS": "NOUN"}, {"TEXT": "or"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "like"}, {"TEXT": "other"}, {"POS": "NOUN"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "the"}, {"POS": "NOUN"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "one"}, {"TEXT": "of"}, {"TEXT": "these"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "be"}, {"TEXT": "example"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "call"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "which"}, {"TEXT": "be"}, {"TEXT": "name"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "mainly"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "mostly"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "notably"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "principally"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "in particular"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "except"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "except"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "other than"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "e.g."}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "i.e."}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "a"},{"TEXT": "kind"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "a"},{"TEXT": "kind"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "a"},{"TEXT": "form"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "a"},{"TEXT": "for"}, {"TEXT": "of"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "looks"},{"TEXT": "like"}, {"POS": "NOUN"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "sounds"},{"TEXT": "like"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "be"},{"TEXT": "similar"}, {"TEXT": "to"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "example"}, {"TEXT": "of"},{"TEXT": "this"}, {"TEXT": "be"},{"POS": "NOUN"}, {"TEXT": "ir"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "type"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"},  {"POS": "NOUN"}, {"TEXT": "type"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"},  {"POS": "NOUN"}, {"TEXT": "type"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "whether"}, {"POS": "NOUN"}, {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "compare"}, {"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "with"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"TEXT": "compare"}, {"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "with"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "and"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "compare"}, {"TEXT": "to"}, {"POS": "NOUN"},  {"TEXT": "or"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "as"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "as"}, {"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "for instance"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "for instance"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "and"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "or"}, {"TEXT": "sort"}, {"TEXT": "of"},{"POS": "NOUN"}]}
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "and"}]} 
+{"label": "HYPERNYM", "pattern": [{"POS": "NOUN"}, {"TEXT": "which"}, {"TEXT": "may"}, {"TEXT": "include"}, {"POS": "NOUN"}, {"TEXT": "or"}]}

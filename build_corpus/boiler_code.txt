@@ -1,0 +1,279 @@
+# Create overall dict of CUIS
+# Each key CUI contains a list
+# That list indices are also lists for each property we take
+# Can find CUI in dict with key, access index of master list, then;
+# for each sub list per property iterate over as needed.
+
+# For the Metathesaurus:
+# Total lines/CUIs in MRCONSO "7,964,596"
+# Total lines/CUIs/definitions: 291,835
+# Total CUIs in MRHIER "2,894,771 but many many atoms for each concept"
+"""
+1. Find all atoms of a UMLS concept.
+
+SELECT * FROM mrconso
+WHERE cui = 'C0032344';
+
+2. Find all source definitions associated with a UMLS concept.
+
+SELECT * FROM mrdef
+WHERE cui = 'C0032344';
+
+3. Find all source contexts associated with a UMLS concept.
+
+SELECT * FROM mrhier
+WHERE cui = 'C0032344';
+
+4. Find all attributes for a UMLS concept.
+
+SELECT * FROM mrsat
+WHERE cui = 'C0032344'
+		 AND stype = 'CUI';
+
+5. Find all semantic types for a UMLS concept.
+
+SELECT * FROM mrsty
+WHERE cui = 'C0032344';
+
+6.a. Find all relationships for a UMLS concept.
+Note: In MRREL, the REL/RELA always expresses the nature of the relationship from CUI2 to the "current concept", CUI1. Because we're querying CUI1 below, this represents the "natural" direction of the relationship.
+
+SELECT * FROM mrrel
+WHERE cui1 = 'C0032344'
+
+6.b. Find all inverse relationships for a UMLS concept.
+Note: In MRREL, the REL/RELA always expresses the nature of the relationship from CUI2 to the "current concept", CUI1. Because we're querying CUI2 below, this represents the opposite of the "natural" direction of the relationship.
+
+SELECT * FROM mrrel
+WHERE cui2 = 'C0032344';
+		 AND stype2 = 'CUI';
+
+7. Find all relationships for a concept and the preferred (English) name of the CUI2.
+
+SELECT a.cui1, a.cui2, b.str FROM mrrel a, mrconso b
+WHERE a.cui1 = 'C0032344'
+		 AND a.stype1 = 'CUI'
+		 AND a.cui2 = b.cui
+		 AND b.ts = 'P'
+		 AND b.stt = 'PF'
+		 AND b.ispref = 'Y'
+		 AND b.lat = 'ENG';
+"""
+
+
+##################################################################################################################################################
+
+#MRCONSO generate CUI dictionary file, this will be faster than re-creating every time we are getting data
+# Total lines/CUIs in MRCONSO 7,964,596
+"""
+CUIs = {}
+
+
+f = open('/home/karl/UMLS/2020AB/META/MRCONSO.RRF', 'r') 
+for line in f.readlines():
+	print(line)
+	splitline = str(line).strip().split('|')
+	CUI = splitline[0]
+
+	if not CUI in CUIs:
+		CUIs[CUI] = []
+f.close()
+
+print(len(CUIs))
+"""
+
+# THIS MANY UNIQUE IN DICTIONARY 3,500,967
+
+#Let's batch these to reduce iteration time to find unique CUIs
+
+
+
+
+
+# TO NOTE YOU WERE THINKING USING THE DEF APPLY FX TO USE WITH A LIST COMPREHENSION LIKE apply(L,f) where L is a list of str objects (i.e. lines in a file)
+# THEN F PERFORMS A FX ON EACH LINE IN A LOOP FOR BATCHING - ?>?? MULTITHREAD?PROCESS
+
+
+
+
+"""
+f = open('/home/karl/UMLS/2020AB/META/MRCONSO.RRF', 'r') 
+for line in f.readlines():
+	#print(line)
+	splitline = str(line).strip().split('|')
+	CUI = splitline[0]
+	word = splitline[14]
+	integer = int(CUI[1:])
+	print('starting run for: ', word, CUI, integer)
+	print('starting multiprocessing')
+
+	if __name__ == '__main__':
+		[q() for q in ql, 10]:
+			p = multiprocessing.Process(target=q)
+			p.start()
+f.close()
+f = ''
+"""
+
+
+
+
+
+
+
+"""
+ubatch_list = 	[unique_batch0, unique_batch1, unique_batch2, unique_batch3, unique_batch4, unique_batch5, unique_batch6, unique_batch7,
+				unique_batch8, unique_batch9, unique_batch10, unique_batch11, unique_batch12, unique_batch13, unique_batch14, unique_batch15,
+				unique_batch16, unique_batch17, unique_batch18, unique_batch19,unique_batch20, unique_batch21, unique_batch22,unique_batch23,
+				unique_batch24, unique_batch25, unique_batch26,unique_batch27, unique_batch28, unique_batch29, unique_batch30,unique_batch31,
+				unique_batch32, unique_batch33, unique_batch34, unique_batch35, unique_batch36, unique_batch37,unique_batch38, unique_batch39,
+				unique_batch40, unique_batch41, unique_batch42, unique_batch43, unique_batch44, unique_batch45, unique_batch46, unique_batch47,
+				unique_batch48, unique_batch49, unique_batch50, unique_batch51, unique_batch52, unique_batch53, unique_batch54, unique_batch55,
+				unique_batch56, unique_batch57, unique_batch58, unique_batch59, unique_batch60, unique_batch61, unique_batch62, unique_batch63,
+				unique_batch64, unique_batch65, unique_batch66, unique_batch67, unique_batch68, unique_batch69, unique_batch70, unique_batch71,
+				unique_batch72, unique_batch73,unique_batch74, unique_batch75, unique_batch76, unique_batch77, unique_batch78, unique_batch79,
+				unique_batch80, unique_batch81, unique_batch82, unique_batch83, unique_batch84, unique_batch85, unique_batch86, unique_batch87,
+				unique_batch88, unique_batch89,unique_batch90, unique_batch91, unique_batch92, unique_batch93, unique_batch94, unique_batch95,
+				unique_batch96, unique_batch97, unique_batch98, unique_batch99, unique_batch100]
+
+
+final_ubatch_list = list(itertools.chain.from_iterable(ubatch_list))
+ubatch_list = []
+
+print(len(final_ubatch_list))
+final_ubatch_list = []
+
+"""
+
+
+
+
+
+"""tbatch_list = 	[total_batch1, total_batch2, total_batch3, total_batch4, total_batch5, total_batch6, total_batch7, total_batch8,
+				total_batch9, total_batch10, total_batch11, total_batch12, total_batch13, total_batch14, total_batch15, total_batch16,
+				total_batch17, total_batch18, total_batch19,total_batch20, total_batch21, total_batch22,total_batch23, total_batch24,
+				total_batch25, total_batch26,total_batch27, total_batch28, total_batch29, total_batch30,total_batch31, total_batch32,
+				total_batch33, total_batch34, total_batch35, total_batch36, total_batch37,total_batch38, total_batch39, total_batch40,
+				total_batch41, total_batch42, total_batch43, total_batch44, total_batch45, total_batch46, total_batch47, total_batch48,
+				total_batch49, total_batch50, total_batch51, total_batch52, total_batch53, total_batch54, total_batch55, total_batch56,
+				total_batch57, total_batch58, total_batch59, total_batch60, total_batch61, total_batch62, total_batch63, total_batch64,
+				total_batch65, total_batch66, total_batch67, total_batch68, total_batch69, total_batch70, total_batch71, total_batch72,
+				total_batch73,total_batch74, total_batch75, total_batch76, total_batch77, total_batch78, total_batch79,	total_batch80,
+				total_batch81, total_batch82, total_batch83, total_batch84, total_batch85, total_batch86, total_batch87, total_batch88,
+				total_batch89,total_batch90, total_batch91, total_batch92, total_batch93, total_batch94, total_batch95,	total_batch96,
+				total_batch97, total_batch98, total_batch99, total_batch100]
+
+
+
+final_tbatch_list = list(itertools.chain.from_iterable(tbatch_list))
+tbatch_list = []
+
+
+print(len(final_tbatch_list))
+final_tbatch_list = []"""
+
+
+
+
+
+
+
+
+#print('This many total in MRCONSO by line - not unique: ', len(CUIs))
+# 7964596
+
+#with open("./CUI_dictionary.txt", "w+") as f:
+#	f.write(str(CUIs))
+
+"""
+#MRCONSO - interate over file
+import ast
+file = open("CUI_dictionary.txt", "r")
+
+contents = file.read()
+dictionary = ast.literal_eval(contents)
+
+file.close()
+print(len(dictionary))
+"""
+"""
+def unique(list1):
+ 
+		# intilize a null list
+		unique_list = []
+		 
+		# traverse for all elements
+		for x in list1:
+				print(x)
+				# check if exists in unique_list or not
+				if x not in unique_list:
+						unique_list.append(x)
+		# print list
+		print('This many unique in MRCONSO by unique list fx: ', len(unique_list))
+
+		with open ('unique_CUI_list.txt', 'w+') as f2:
+			f2.write(unique_list) # write to file so we don't have to do this again
+
+unique(CUIs)
+"""
+"""
+f = open('/home/karl/UMLS/2020AB/META/MRCONSO.RRF', 'r') 
+count = 0
+for line in f.readlines():
+	#print(line)
+	splitline = str(line).strip().split('|')
+	CUI = splitline[0]
+	AUI = splitline[7]
+	word = splitline[14]
+	count = count + 1
+	print(CUI, AUI, word)
+	print(count)
+
+f.close()
+"""
+
+
+
+#read dictionary file
+
+#print(type(dictionary))
+
+
+##################################################################################################################################################
+
+"""
+#MRDEF - interate over file
+f = open('/home/karl/UMLS/2020AB/META/MRDEF.RRF', 'r') 
+count = 0
+for line in f.readlines():
+	#print(line)
+	splitline = str(line).strip().split('|')
+	CUI = splitline[0]
+	AUI = splitline[1]
+	definition = splitline[5]
+	count = count + 1
+	print(CUI, AUI, definition)
+	print(count)
+
+f.close()
+"""
+
+##################################################################################################################################################
+"""
+#MRHIER 
+atoms = {}
+
+f = open('/home/karl/UMLS/2020AB/META/MRHIER.RRF', 'r') 
+count = 0
+for line in f.readlines():
+	count = count + 1
+	print(count)
+	print(line)
+	splitline = line.split('|')
+	CUI = splitline[0]
+	atom = splitline[1]
+	print(CUI, atom)
+	#if not atom in CUIs:
+	#	CUIs[CUI] = []
+f.close()
+"""

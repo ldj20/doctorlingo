@@ -1,0 +1,135 @@
+==========================================================================================================================================
+==========================================================================================================================================
+Overview:
+This document is for a conceptual understanding of corpus and medical lexicon auto-interpreter.
+
+This project is a weird intersection of medicine, linguistics, computer science, and artificial intelligence, more specifically natural language
+processing, a field and type of machine learning artificial intelligence. To clarify the intersection of these fields and why this project
+is important I explain very briefly the overarching and finally uniting principles of these fields in the context of this project.
+
+Briefly (and very practically) let's define some things in simple terms (oh the irony!):
+
+-Artificial intelligence (AI) = teaching computers to learn things
+
+-Machine Learning (ML) = a specific type of AI that teaches a computer to learn things by having it find patterns in examples
+this can supervised (you tell the machine the output you'd expect for a given input and potentially bootstrap it with examples),
+or unsupervised (you do not know what the output should look like and the computer just finds the patterns on its own).
+
+-Natural language processing (NLP) = a specific type of ML/data science that looks to find patterns in literally the natural/day-to-day 
+language used by humans.
+
+-Neural models = types of AI models that are similar to how people think, I'll keep it simple, do some googling though. Interesting!
+
+-Corpus = a body of text that you can feed to a natural language processing component
+
+-Token = a word that is identified by a Natural Language Processing pipeline as a specific entity with specific properties
+
+We will not review what medicine and computer science are because these are more commonly understood fields, at least superficially.
+
+==========================================================================================================================================
+==========================================================================================================================================
+A brief note on linguistics:
+
+Let's pause for a second and recall some linguistic concepts we all already know:
+
+-Definition - the meaning of a word
+-Part of speech (POS) - nouns, verbs, adjectives, adverbs, etc.
+-Synonym - two different words with the same meaning
+-Antonym - two different words with opposite meaning
+
+
+Now let's discuss some concepts that are probably less familiar:
+
+-Lemma = a lemma is a form of a word/token that is the most basic form of the word (similar to Lexemes)
+
+Or more elegantly,
+
+"The lemma is the base form under which the word is entered [in a dictionary] and assigned its place:
+typically, the 'stem,' or simplest form (singular noun, present/infinitive verb, etc.). 
+
+i.e. the Lemma of running is run; coded -> code; written -> write; etc.
+
+-Hypernyms = are a relationship of specificity, a hypernym is a less specific form of a hyponym
+i.e. a greyhound is a type of dog, a computer is a type of machine
+greyhound = the hypernym (less specific) of the hyponym (more specific) dog
+
+-Holonyms/Meronyms = a relationship of things that are part-whole relationships
+i.e. a chair has legs; the holonym is the whole - the chair, the meronym is the part of the whole - the legs
+(note holonyms are not the same thing as homonyms - as described below)
+
+==========================================================================================================================================
+==========================================================================================================================================
+
+It is important to note that this corpus was formatted with similar hierarchies as a corpus called wordnet, and many from the United
+Medical Language Services (UMLS) of the National Library of Medicine (NLM) of the National Institute of health (NIH) -- wow... anyways.
+
+To truly understand this corpus you must therefore understand the linguistic concepts used in both Wordnet and UMLS.
+The corpus and NLP pipeline developed from this project also use WordNet and UMLS as independently searchable corpi apart from the
+Doctor Lingo Corpus.
+
+==========================================================================================================================================
+==========================================================================================================================================
+
+Wordnet setup
+
+This is a huge corpus that is an organized corpus (not a "bag of words") by a hierarchy of concepts.
+
+It is at its most basic unit -- organized into synsets meaning sets of all words that are synonyms.
+Or another way, these synonyms, sharing the same definition, are a part of a unit, called synsets.
+(clever name! -- synonym + set = synset)
+
+These sets aka synsets are then related throughout the hierarchy of the corpus with other linguistic concepts.
+
+An example adjective synset is:
+good, right, ripe – (most suitable or right for a particular purpose; "a good time to plant tomatoes"; "the right time to act"; "the time is ripe for great sociological changes").
+
+
+Of note:
+Words/tokens can occur in different synsets if they have different meanings in particular context.
+From 5th grade remember: Homonyms, that's what these are!
+
+
+(also for coding need to do lemmatization - should lemmatize definitions if any further hypernymy exchange)
+-Etymology
+
+Now onto the description of the WordNet hierarchy.
+
+The most commonly shared relationship in WordNet is hypernymy it makes up like 80+% of the net.
+Relationships in the overall hierarchy vary based on parts of speech, to clarify that, read below:
+
+For POS:
+-If a word is a noun - Most frequently related by hypernymy (~80% of nouns) and meronymy (~20% of nouns). Wordnet distinguishes b/w common nouns and instance nouns (proper, i.e. Obama is an instance of a president), instance nodes are always terminal.
+
+-Since nouns are much more common in languages than are verbs, WordNet terms are mostly related by hypernymy links in the overall hierarchy.
+
+-If a word is a verb - most common relation is troponymy - hierarchy of types of events in terms of specificity, like hypernyms - to communicate can be to talk or to whisper. The specific manner expressed depends on the semantic field; volume (as in the example above)
+
+-If a word is an adjective - the most common relation is antonomy - pairs of “direct” antonyms like wet-dry and young-old reflect the strong semantic contract of their members. Each of these polar adjectives in turn is linked to a number of “semantically similar” ones: dry is linked to parched, arid, dessicated and bone-dry and wet to soggy, waterlogged, etc. Semantically similar adjectives are “indirect antonyms” of the contral member of the opposite pole. Relational adjectives ("pertainyms") point to the nouns they are derived from (criminal-crime). 
+
+-Adverb - there are only few adverbs in WordNet (hardly, mostly, really, etc.) as the majority of English adverbs are straightforwardly derived from adjectives via morphological affixation (surprisingly, strangely, etc.)
+
+
+Because hypernymy is so important in relating words we will briefly review it again with a bit more detail:
+-Hypernymy/hoponym/ = broader/narrower category and has a "IS A" relationship - mostly used for nouns.
+Impoortany to note that hyponymy is transitive, but not hypernymy. This means that german shepherds and pitbulls share the hypernymy relationship of dog
+However, hypernyms do not always share hyponyms (maybe not ever, honestly not sure about that -- ask a linguist - I'm a physician with too much time on my hands)
+
+Again review meronyms as it is the second most important relation in WordNet and the corpus we built:
+-Meronyms (part-whole relation, legs, chair; a chair has legs, not inherited upward through the hypernym tree, chairs have legs but not all furniture does)
+
+
+Thus, WordNet really consists of four sub-nets, one each for nouns, verbs, adjectives and adverbs, with few cross-POS pointers. Cross-POS relations include the “morphosemantic” links that hold among semantically similar words sharing a stem with the same meaning: observe (verb), observant (adjective) observation, observatory (nouns). In many of the noun-verb pairs the semantic role of the noun with respect to the verb has been specified: {sleeper, sleeping_car} is the LOCATION for {sleep} and {painter}is the AGENT of {paint}, while {painting, picture} is its RESULT.
+
+Cross-POS relations
+Cross-POS relations include the “morphosemantic” links that hold among semantically similar words sharing a stem with the same meaning: observe (verb), observant (adjective) observation, observatory (nouns). In many of the noun-verb pairs the semantic role of the noun with respect to the verb has been specified: {sleeper, sleeping_car} is the LOCATION for {sleep} and {painter}is the AGENT of {paint}, while {painting, picture} is its RESULT.
+
+
+
+Hypernym/hyponym - make
+Holonym/Meronym - make
+Tropnonym - steal wordnets
+See Also
+Synonym - built in?
+Antonym - built in??
+Pertainym - ???
+Participle - ???
